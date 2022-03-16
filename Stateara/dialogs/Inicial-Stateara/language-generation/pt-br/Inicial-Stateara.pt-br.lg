@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_jWkadJ()
+[Activity
+    Text = ${ChoiceInput_Prompt_jWkadJ_text()}
+]
+
+# ChoiceInput_Prompt_jWkadJ_text()
+- 👇Por gentileza, como podemos ajudá-lo(a)?👇

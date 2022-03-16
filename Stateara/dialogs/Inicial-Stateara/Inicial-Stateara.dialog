@@ -1,0 +1,82 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "Ibn2WU",
+    "name": "Inicial-Stateara",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "Nir6Ax"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "jWkadJ"
+          },
+          "defaultLocale": "pt-br",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_jWkadJ()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or ",
+            "inlineOr": " or ",
+            "inlineSeparator": ", "
+          },
+          "choices": [
+            "*Digite 1* Se você é um paciente e deseja agendar uma consulta ou retorno com um de nossos profissionais.",
+            "*Digite 2* Se você é ou deseja ser um profissional de saúde parte da equipe Statera."
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true,
+            "recognizeNumbers": true
+          },
+          "property": "dialog.menu"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "GmM7p1"
+          },
+          "actions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "7yl8am"
+              },
+              "activityProcessed": true,
+              "dialog": "Ask_Professional"
+            }
+          ],
+          "condition": "=contains(dialog.menu, \"1\")"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "FHjMqN"
+          },
+          "activityProcessed": true,
+          "dialog": "Transfer_Agent"
+        }
+      ]
+    }
+  ],
+  "generator": "Inicial-Stateara.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "Inicial-Stateara"
+}

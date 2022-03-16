@@ -1,0 +1,41 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "GbYaVx",
+    "name": "Transfer_Agent",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "2JNdol"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "UqJnnT"
+          },
+          "property": "user.department",
+          "value": "Atendimento"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "7eM0Xn"
+          },
+          "property": "user.transferagent",
+          "value": "Sim"
+        }
+      ]
+    }
+  ],
+  "generator": "Transfer_Agent.lg",
+  "recognizer": "Transfer_Agent.lu.qna",
+  "id": "Transfer_Agent"
+}

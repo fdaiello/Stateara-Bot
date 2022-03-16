@@ -1,0 +1,9 @@
+[import](common.lg)
+
+# ChoiceInput_Prompt_4lMACB()
+[Activity
+    Text = ${ChoiceInput_Prompt_4lMACB_text()}
+]
+
+# ChoiceInput_Prompt_4lMACB_text()
+- Com qual profissional você gostaria de marcar atendimento?

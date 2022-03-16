@@ -1,0 +1,64 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "HVq6aU",
+    "name": "Ask_Professional",
+    "comment": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "uNvdiB"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.ChoiceInput",
+          "$designer": {
+            "id": "4lMACB"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${ChoiceInput_Prompt_4lMACB()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "choiceOptions": {
+            "includeNumbers": true,
+            "inlineOrMore": ", or "
+          },
+          "defaultLocale": "pt-br",
+          "choices": [
+            "Cíntia Faria - Terapeuta",
+            "Dr. Wilson - Cirurgião Plástico",
+            "Dr. Pedro - Nutrólogo",
+            "Dra. Ananda - Otorrinolaringologista/Esteticista",
+            "Dra. Daniela - Especialista em Medicina Estética",
+            "Dr Mateus - cirurgião dentista",
+            "Dra. Luiza - Dermatologista",
+            "Dra. Irisnádia - Farmacêutica/Ozonioterapeuta",
+            "Magda Fernandes - Terapeuta",
+            "Dra. Lauren - Esteticista",
+            "Dra. Janayna - Nutricionista",
+            "Daniel Magalhães - Terapeuta"
+          ],
+          "recognizerOptions": {
+            "recognizeOrdinals": true
+          },
+          "property": "user.profissional"
+        }
+      ]
+    }
+  ],
+  "generator": "Ask_Professional.lg",
+  "recognizer": {
+    "$kind": "Microsoft.RegexRecognizer",
+    "intents": []
+  },
+  "id": "Ask_Professional"
+}
