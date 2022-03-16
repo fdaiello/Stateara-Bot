@@ -19,14 +19,6 @@
         {
           "$kind": "Microsoft.SetProperty",
           "$designer": {
-            "id": "UqJnnT"
-          },
-          "property": "user.department",
-          "value": "Atendimento"
-        },
-        {
-          "$kind": "Microsoft.SetProperty",
-          "$designer": {
             "id": "7eM0Xn"
           },
           "property": "user.transferagent",

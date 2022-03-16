@@ -52,6 +52,18 @@
           },
           "actions": [
             {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "jsi84H"
+              },
+              "assignments": [
+                {
+                  "property": "user.department",
+                  "value": "Atendimento"
+                }
+              ]
+            },
+            {
               "$kind": "Microsoft.BeginDialog",
               "$designer": {
                 "id": "7yl8am"
@@ -60,7 +72,21 @@
               "dialog": "Ask_Professional"
             }
           ],
-          "condition": "=contains(dialog.menu, \"1\")"
+          "condition": "=contains(dialog.menu, \"1\")",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperties",
+              "$designer": {
+                "id": "UoTsyt"
+              },
+              "assignments": [
+                {
+                  "property": "user.department",
+                  "value": "Gestão Comercial"
+                }
+              ]
+            }
+          ]
         },
         {
           "$kind": "Microsoft.BeginDialog",
